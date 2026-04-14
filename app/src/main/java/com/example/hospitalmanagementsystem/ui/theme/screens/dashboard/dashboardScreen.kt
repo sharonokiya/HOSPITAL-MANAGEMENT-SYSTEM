@@ -130,7 +130,12 @@ fun DashboardScreen(navController:NavHostController) {
 
 
                 Button(
-                    onClick = { println("Logout clicked") },
+                    onClick = {
+
+                        navController.navigate("register") {
+                            popUpTo("dashboard") { inclusive = true }
+                        }
+                    },
                     colors = ButtonDefaults.buttonColors(containerColor = Color.Red),
                     shape = RoundedCornerShape(20.dp)
                 ) {

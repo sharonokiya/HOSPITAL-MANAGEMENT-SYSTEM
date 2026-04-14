@@ -107,7 +107,9 @@ fun LoginScreen(navController: NavHostController) {
 
         Button(
             onClick = {
-                // TODO: Handle login
+                navController.navigate("dashboard") {
+                    popUpTo("login") { inclusive = true }
+                }
             },
             modifier = Modifier.fillMaxWidth()
         ) {
