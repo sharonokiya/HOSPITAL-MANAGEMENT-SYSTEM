@@ -12,7 +12,7 @@ import com.example.hospitalmanagementsystem.ui.theme.screens.register.RegisterSc
 
 @Composable
 fun AppNAvHost(navController: NavHostController = rememberNavController(),
-               startDestination:String = ROUTE_DASHBOARD) {
+               startDestination:String = ROUTE_ADD_PATIENT) {
     NavHost(navController = navController, startDestination = startDestination) {
         composable(ROUTE_REGISTER) {RegisterScreen(navController)}
         composable(ROUTE_LOGIN) {LoginScreen(navController)}
